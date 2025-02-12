@@ -1,6 +1,6 @@
 [package]
 name = "ferrite_ml_framework"
-version = "0.1.0-alpha.1"
+version = "0.1.0-alpha.2"
 edition = "2021"
 
 description = "A modern, robust and simple to use ML framework written in Rust for pure performance and memory safety"
