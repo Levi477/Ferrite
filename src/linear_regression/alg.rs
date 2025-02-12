@@ -4,7 +4,6 @@ use super::error_fn;
 use super::output;
 
 struct LinearRegression {
-
 }
 
 
