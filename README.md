@@ -8,7 +8,7 @@
 ---
 
 ## ⚡ What is Ferrite?  
-Ferrite is a blazing-fast, memory-safe **Machine Learning** framework written in **Rust**. It provides an intuitive API while ensuring high efficiency and control over computations.  
+Ferrite is a memory-safe and simple to use **Machine Learning** framework written in **Rust**. It provides an intuitive API while ensuring high efficiency and control over computations.  
 
 - 🔹 **Performance-Driven** – No overhead, just raw speed.  *(Work in Progress 🚧)*
 - 🔹 **Memory-Safe** – No segfaults, no leaks, just Rust.  
