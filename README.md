@@ -39,16 +39,16 @@ Ferrite is a blazing-fast, memory-safe **Machine Learning** framework written in
 To add Ferrite to your Rust project, simply include it in your `Cargo.toml`:  
 
 ## 📜 Roadmap
-- 📌 Implement more ML models like Decision Trees & Gradient Boosting.
-- 📌 Optimize performance using SIMD & GPU acceleration.
-- 📌 Provide a high-level API similar to Scikit-Learn.
+📌 Implement more ML models like Decision Trees & Gradient Boosting.<br>
+📌 Optimize performance using SIMD & GPU acceleration.<br>
+📌 Provide a high-level API similar to Scikit-Learn.<br>
 
 ## 🤝 Contributing
-Want to make Ferrite better? Feel free to contribute!
-	- 1.	Fork the repo 🍴
-	- 2.	Create a branch 🔧
-	- 3.	Commit your changes 💡
-	- 4.	Submit a pull request 🚀
+Want to make Ferrite better? Feel free to contribute!<br>
+	 1.	Fork the repo 🍴<br>
+	 2.	Create a branch 🔧<br>
+	 3.	Commit your changes 💡<br>
+	 4.	Submit a pull request 🚀<br>
 
 ## 🛡️ License
-Ferrite is MIT Licensed, so you can use it freely in your projects!
+Ferrite is MIT Licensed, so you can use it freely in your projects!<br>
