@@ -1,5 +1,5 @@
 [package]
-name = "ferrite_ml_framework "
+name = "ferrite_ml_framework"
 version = "0.1.0-alpha.1"
 edition = "2021"
 
