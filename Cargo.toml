@@ -1,5 +1,5 @@
 [package]
-name = "ferrite"
+name = "Ferrite"
 version = "0.1.0-alpha.1"
 edition = "2021"
 
@@ -7,3 +7,9 @@ edition = "2021"
 ndarray = "0.16.1"
 ndarray-linalg = "0.17.0"
 ndarray-rand = "0.15.0"
+
+description = "A modern, robust and simple to use ML framework written in Rust for pure performance and memory safety"
+license = "MIT"
+
+authors = ["Levi <deepgajjar54@gmail.com>"]
+repository = "https://github.com/Levi477/Ferrite"
