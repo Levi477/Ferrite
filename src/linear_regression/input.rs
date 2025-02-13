@@ -28,7 +28,7 @@ impl Input {
     ///
     /// # Returns
     /// A Modified 2D Array (i.e. Modified Input)
-    pub fn adjust_input(& mut self){
+    pub fn adjust_input(&mut self){
 
         let mut adjusted_array : Array2<f64> = Array2::zeros((0,self.input_dimension.1+1));
 
@@ -41,7 +41,7 @@ impl Input {
                 println!("Linear Regression :: Input :: adjust_input :: Error occured while pushing row to array : {}",e);
             };
         }
-    
+
         self.input = adjusted_array;
         self.input_dimension = self.input.dim();
     }

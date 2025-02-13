@@ -12,4 +12,5 @@ repository = "https://github.com/Levi477/Ferrite"
 ndarray = "0.16.1"
 ndarray-linalg = "0.17.0"
 ndarray-rand = "0.15.0"
+rayon = "1.10.0"
 
