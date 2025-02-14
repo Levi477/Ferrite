@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # 🚀 Ferrite  
 =======
 ## 🚀 Ferrite  
@@ -59,4 +58,3 @@ Want to make Ferrite better? Feel free to contribute!<br>
 Ferrite is MIT Licensed, so you can use it freely in your projects!<br>
 =======
 Ferrite is MIT Licensed, so you can use it freely in your projects!<br> Ferrite
->>>>>>> 480d0bd (readme file update)
