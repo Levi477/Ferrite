@@ -14,11 +14,13 @@ pub struct LinearRegression {
 }
 
 impl LinearRegression {
-    pub fn new(input : Array2<f64>,output :Array2<f64>) -> Self{
-        let weight_shape : (usize,usize) = (input.dim().1 +1 ,output.dim().1);
+    pub fn new(input : Array2<f64>,output : Array2<f64>) -> Self{
+        let weight_shape : (usize,usize) = (input.dim().1 ,output.dim().1);
         let output_shape : (usize,usize) = output.dim();
+        let mut input_matirx = Input::new(input);
+        input_matirx.adjust_input();
         Self{
-            input : Input::new(input),
+            input : input_matirx,
             output,
             weight : Weight::init(weight_shape),
             loss : 0.,
@@ -30,10 +32,13 @@ impl LinearRegression {
         self.weight.print();
     }
     pub fn train(& mut self,epochs : usize,lr : f64){
-        self.input.adjust_input();
+        println!("step 0 ");
         let input_matirx = self.input.get_input_matrix();
         let cost_fn = ErrorFn::mean_squared_error();
         let gradient = Gradient::mean_squared_error();
+        let pred = &self.output;
+        let cost = 8;
+        println!("step 1");
         for epoch in 0..epochs{
             let pred = self.weight.multiply(input_matirx);
             let cost = cost_fn.calculate_loss(&pred,&self.output);
@@ -41,6 +46,9 @@ impl LinearRegression {
             self.weight.update(lr,&grad); 
             println!("epoch : {} ,cost : {}",epoch,cost);
         }
+    }
+    pub fn get_weight(&self) -> Array2<f64> {
+        self.weight.get()
     }
 }
 

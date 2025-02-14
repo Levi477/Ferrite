@@ -9,7 +9,7 @@ authors = ["Levi <deepgajjar54@gmail.com>"]
 repository = "https://github.com/Levi477/Ferrite"
 
 [dependencies]
+nalgebra = "0.33.2"
 ndarray = "0.16.1"
 ndarray-linalg = "0.17.0"
 ndarray-rand = "0.15.0"
-
