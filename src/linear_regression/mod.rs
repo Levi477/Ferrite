@@ -1,6 +1,6 @@
 pub mod alg;
-mod error_fn;
+pub mod error_fn;
 mod input;
 mod output;
-mod gradient;
+pub mod gradient;
 mod weight;

@@ -22,13 +22,7 @@ impl Weight {
         self.weight_matrix = &self.weight_matrix - (lr*gradient);
     }
     pub fn multiply(&self, input: &Array2<f64>) -> Array2<f64> {
-        println!("Multiply function called");
-        println!("Weight Matrix Shape: {:?}", self.weight_matrix.dim());
-        println!("Input Shape: {:?}", input.dim());
-
         let result = self.weight_matrix.dot(input);
-
-        println!("Multiplication Success");
         result
     }
     pub fn print(&self){

@@ -47,10 +47,11 @@ impl Gradient {
                 gradient_matrix
             },
             GradientType::HubberLoss => {
-                let gradient_matrix = error_matrix.mapv(|x| {
+                let gradient_matrix = (1./total_elements) * error_matrix.mapv(|x| {
                     if x.abs()<=delta { x }
                     else {delta*x.signum() }
                 });
+                println!("gradient_matrix");
                 gradient_matrix
             }
         }
