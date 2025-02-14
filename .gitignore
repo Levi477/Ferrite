@@ -3,6 +3,7 @@ target/
 
 # Dependencies
 Cargo.lock
+README.md
 
 # IDE / Editor files
 *.rs.bk
