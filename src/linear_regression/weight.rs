@@ -21,5 +21,9 @@ impl Weight {
     pub fn multiply(&self,input : Array2<f64>) -> Array2<f64>{
         self.weight_matrix.dot(&input)
     }
+    pub fn print(&self){
+        println!("weight matrix : {}",self.weight_matrix);
+        println!("weight dim : {:?}",self.weight_dim);
+    }
 
 }

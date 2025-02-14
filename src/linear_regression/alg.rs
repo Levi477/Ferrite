@@ -1,11 +1,11 @@
 use ndarray::Array2;
-use super::input;
 use super::error_fn;
 use super::output;
+use super::input::Input;
 use super::weight::Weight;
 
-struct LinearRegression {
-    input : Array2<f64>,
+pub struct LinearRegression {
+    input : Input,
     output : Array2<f64>,
     weight : Weight,
     loss : f64,
@@ -13,8 +13,20 @@ struct LinearRegression {
 }
 
 impl LinearRegression {
-    pub fn new(input : Array2<f64>,output : Array2<f64>){
-        
+    pub fn new(input : Array2<f64>,output :Array2<f64>) -> Self{
+        let weight_shape : (usize,usize) = (input.dim().1 +1 ,output.dim().1);
+        let output_shape : (usize,usize) = output.dim(); 
+        Self{
+            input : Input::new(input),
+            output,
+            weight : Weight::init(weight_shape),
+            loss : 0.,
+            prediction : Array2::zeros(output_shape)
+        }
+    }
+    pub fn print(&self){
+        self.input.print();
+        self.weight.print();
     }
 }
 
