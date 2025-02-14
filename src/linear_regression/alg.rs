@@ -1,8 +1,9 @@
 use ndarray::Array2;
-use super::error_fn;
+use super::error_fn::ErrorFn;
 use super::output;
 use super::input::Input;
 use super::weight::Weight;
+use super::gradient::Gradient;
 
 pub struct LinearRegression {
     input : Input,
@@ -15,7 +16,7 @@ pub struct LinearRegression {
 impl LinearRegression {
     pub fn new(input : Array2<f64>,output :Array2<f64>) -> Self{
         let weight_shape : (usize,usize) = (input.dim().1 +1 ,output.dim().1);
-        let output_shape : (usize,usize) = output.dim(); 
+        let output_shape : (usize,usize) = output.dim();
         Self{
             input : Input::new(input),
             output,
@@ -27,6 +28,16 @@ impl LinearRegression {
     pub fn print(&self){
         self.input.print();
         self.weight.print();
+    }
+    pub fn train(& mut self,epochs : usize,lr : f64){
+        for epoch in 0..epochs{
+            let pred = self.weight.multiply(self.input.get_input_matrix());
+            let cost_fn = ErrorFn::mean_squared_error();
+            let cost = cost_fn.calculate_loss(&pred,&self.output);
+            println!("epoch : {} ,cost : {}",epoch,cost);
+            let grad = Gradient::mean_squared_error().calculate_gradient(1.,&self.input.get_input_matrix(),&pred,&self.output);
+            self.weight.update(lr,&grad); 
+        }
     }
 }
 
