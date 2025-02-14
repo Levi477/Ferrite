@@ -1,7 +1,4 @@
 # 🚀 Ferrite  
-=======
-## 🚀 Ferrite  
->>>>>>> 480d0bd (readme file update)
 *A modern, robust, and simple-to-use ML framework in Rust for pure performance and memory safety.*  
 
 ![Ferrite Logo](https://img.shields.io/badge/Made%20with-Rust-orange?style=for-the-badge&logo=rust&logoColor=white)  
@@ -54,7 +51,4 @@ Want to make Ferrite better? Feel free to contribute!<br>
 	 4.	Submit a pull request 🚀<br>
 
 ## 🛡️ License
-<<<<<<< HEAD
 Ferrite is MIT Licensed, so you can use it freely in your projects!<br>
-=======
-Ferrite is MIT Licensed, so you can use it freely in your projects!<br> Ferrite
