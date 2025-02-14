@@ -32,7 +32,7 @@ impl LinearRegression {
 
 pub fn test(){
     let array : Array2<f64> = Array2::zeros((4,4));
-    let mut input = input::Input::new(array);
+    let mut input = Input::new(array);
     println!("Before adjusting : ");
     input.print();
     println!("After adjusting : ");
