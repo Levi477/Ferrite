@@ -30,13 +30,16 @@ impl LinearRegression {
         self.weight.print();
     }
     pub fn train(& mut self,epochs : usize,lr : f64){
+        self.input.adjust_input();
+        let input_matirx = self.input.get_input_matrix();
+        let cost_fn = ErrorFn::mean_squared_error();
+        let gradient = Gradient::mean_squared_error();
         for epoch in 0..epochs{
-            let pred = self.weight.multiply(self.input.get_input_matrix());
-            let cost_fn = ErrorFn::mean_squared_error();
+            let pred = self.weight.multiply(input_matirx);
             let cost = cost_fn.calculate_loss(&pred,&self.output);
-            println!("epoch : {} ,cost : {}",epoch,cost);
-            let grad = Gradient::mean_squared_error().calculate_gradient(1.,&self.input.get_input_matrix(),&pred,&self.output);
+            let grad = gradient.calculate_gradient(1.,input_matirx,&pred,&self.output);
             self.weight.update(lr,&grad); 
+            println!("epoch : {} ,cost : {}",epoch,cost);
         }
     }
 }
