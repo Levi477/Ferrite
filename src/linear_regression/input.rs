@@ -52,4 +52,9 @@ impl Input {
         println!("Input Array Dimension : {:?}",self.input_dimension);
     }
 
+    /// get matrix stored in input struct as a reference 
+    pub fn get_input_matrix(&self) -> &Array2<f64>{
+        &self.input
+    }
+
 }

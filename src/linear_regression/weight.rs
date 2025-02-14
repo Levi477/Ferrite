@@ -1,0 +1,25 @@
+use ndarray::Array2;
+use ndarray_rand::RandomExt;
+use ndarray_rand::rand_distr::Uniform;
+
+pub struct Weight{
+    weight_matrix : Array2<f64>,
+    weight_dim : (usize,usize)
+}
+
+impl Weight {
+    pub fn init(shape : (usize,usize)) -> Self{
+        Self{
+            weight_matrix : Array2::random(shape,Uniform::new(0.,1.0)),
+            weight_dim : shape
+
+        }
+    }
+    pub fn update(&mut self ,lr : f64, gradient : &Array2<f64>){
+        self.weight_matrix = &self.weight_matrix - (lr*gradient);
+    }
+    pub fn multiply(&self,input : Array2<f64>) -> Array2<f64>{
+        self.weight_matrix.dot(&input)
+    }
+
+}
