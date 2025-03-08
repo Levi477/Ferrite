@@ -5,23 +5,27 @@ use crate::multivariate_regression::gradient::gradient_type::GradientType;
 use crate::multivariate_regression::input::Input;
 use crate::multivariate_regression::normalization::NormalizationParameterType;
 use crate::multivariate_regression::regularization::{Regularization, RegularizationType};
+use crate::multivariate_regression::training::train_config::TrainConfig;
 use crate::multivariate_regression::update_weight::{update_weight, MiniBatchSize, UpdatationMethod};
 use crate::multivariate_regression::weight::Weight;
 
 pub fn train(
     input: Array2<f64>,
     output: Array2<f64>,
-    epochs: usize,
-    lr : f64,
-    normalization_parameter_type: Option<NormalizationParameterType>,
-    optimizer : Option<UpdatationMethod>,
-    mini_batch_size : Option<MiniBatchSize>,
-    regularization: Option<Regularization>,
-    cost_fn : Option<CostFn>,
-    gradient_fn : Option<Gradient>,
-    delta : Option<f64>,
-    print_log : bool,
+    config : TrainConfig
 ){
+    let TrainConfig {
+        epochs,
+        lr,
+        normalization_parameter_type,
+        optimizer,
+        mini_batch_size,
+        regularization,
+        cost_fn,
+        gradient_fn,
+        delta,
+        print_log,
+    } = config; 
     // normalization parameter
     let mut input_struct = Input::new(input.clone(),output.clone(),normalization_parameter_type);
     input_struct.adjust_input(); // adjust input to accomodate bias term of weight
