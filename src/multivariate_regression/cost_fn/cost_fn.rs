@@ -1,5 +1,5 @@
-use crate::multivariate_regression::regularization::{Regularization};
 use ndarray::Array2;
+use crate::multivariate_regression::regularization::regularization::Regularization;
 
 pub enum CostFnType {
     MeanAbsoluteError,

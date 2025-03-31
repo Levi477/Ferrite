@@ -1,5 +1,5 @@
-use crate::multivariate_regression::normalization::{normalize_data, NormalizationParameterType};
 use ndarray::{Array1, Array2, Axis};
+use crate::multivariate_regression::normalization::normalization::{normalize_data, NormalizationParameterType};
 
 pub struct Input {
     pub(crate) input: Array2<f64>,

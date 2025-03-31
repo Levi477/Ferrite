@@ -1,7 +1,7 @@
-use crate::multivariate_regression::cost_fn::CostFn;
+use crate::multivariate_regression::cost_fn::cost_fn::CostFn;
 use crate::multivariate_regression::gradient::Gradient;
-use crate::multivariate_regression::normalization::NormalizationParameterType;
-use crate::multivariate_regression::regularization::Regularization;
+use crate::multivariate_regression::normalization::normalization::NormalizationParameterType;
+use crate::multivariate_regression::regularization::regularization::Regularization;
 use crate::multivariate_regression::update_weight::{MiniBatchSize, UpdatationMethod};
 
 pub struct TrainConfig {

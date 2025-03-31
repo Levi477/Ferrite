@@ -1,8 +1,8 @@
 use ndarray::{Array2, Axis, s};
 use crate::matrix_operations::mat_mul::matrix_mul;
-use crate::multivariate_regression::cost_fn::CostFn;
+use crate::multivariate_regression::cost_fn::cost_fn::CostFn;
 use crate::multivariate_regression::gradient::Gradient;
-use crate::multivariate_regression::regularization::Regularization;
+use crate::multivariate_regression::regularization::regularization::Regularization;
 
 pub enum UpdatationMethod {
     SGD,

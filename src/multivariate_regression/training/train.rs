@@ -1,13 +1,12 @@
 use ndarray::Array2;
-use crate::multivariate_regression::cost_fn::{CostFn, CostFnType};
+use crate::multivariate_regression::cost_fn::cost_fn::{CostFn, CostFnType};
 use crate::multivariate_regression::gradient::Gradient;
 use crate::multivariate_regression::gradient::gradient_type::GradientType;
-use crate::multivariate_regression::input::Input;
-use crate::multivariate_regression::normalization::NormalizationParameterType;
-use crate::multivariate_regression::regularization::{Regularization, RegularizationType};
+use crate::multivariate_regression::input::input::Input;
+use crate::multivariate_regression::regularization::regularization::{Regularization, RegularizationType};
 use crate::multivariate_regression::training::train_config::TrainConfig;
 use crate::multivariate_regression::update_weight::{update_weight, MiniBatchSize, UpdatationMethod};
-use crate::multivariate_regression::weight::Weight;
+use crate::multivariate_regression::weight::weight::Weight;
 
 pub fn train(
     input: Array2<f64>,

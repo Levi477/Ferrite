@@ -1,8 +1,8 @@
 use ndarray::Array2;
 use crate::matrix_operations::mat_mul::matrix_mul;
 use crate::multivariate_regression::gradient::gradient_type::GradientType;
-use crate::multivariate_regression::regularization::Regularization;
-use crate::multivariate_regression::regularization::RegularizationType;
+use crate::multivariate_regression::regularization::regularization::{Regularization, RegularizationType};
+use ndarray::indices;
 
 pub mod gradient_type;
 
