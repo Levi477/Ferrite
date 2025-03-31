@@ -3,17 +3,6 @@
 version = 4
 
 [[package]]
-name = "Ferrite"
-version = "0.0.1-beta.2"
-dependencies = [
- "csv",
- "matrixmultiply",
- "ndarray",
- "ndarray-rand",
- "rand",
-]
-
-[[package]]
 name = "autocfg"
 version = "1.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -50,6 +39,17 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "7d02f3b0da4c6504f86e9cd789d8dbafab48c2321be74e9987593de5a894d93d"
 dependencies = [
  "memchr",
+]
+
+[[package]]
+name = "ferrite-rs"
+version = "0.0.1-beta.2"
+dependencies = [
+ "csv",
+ "matrixmultiply",
+ "ndarray",
+ "ndarray-rand",
+ "rand",
 ]
 
 [[package]]
