@@ -1,1 +1,3 @@
-pub mod mat_mul;
+mod mat_mul;
+
+pub use mat_mul::*;
